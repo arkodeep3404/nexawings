@@ -1,17 +1,17 @@
-import { 
-  people01, 
-  people02, 
-  people03, 
-  facebook, 
-  instagram, 
-  linkedin, 
-  twitter, 
-  airbnb, 
-  binance, 
-  coinbase, 
-  dropbox, 
-  send, 
-  shield, 
+import {
+  people01,
+  people02,
+  people03,
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+  airbnb,
+  binance,
+  coinbase,
+  dropbox,
+  send,
+  shield,
   star
 } from "../assets";
 
@@ -38,23 +38,23 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Rewards",
+    title: "Discovery",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "We get on a call with you to understand your business and pain points. This helps us understand how we can help you improve your business.",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "100% Secured",
+    title: "Development",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "We start the development, and provide you with regular updates to ensure the final product aligns with your expectations and needs.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Balance Transfer",
+    title: "Delivery",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Committed to building a lasting partnership with you, we aim to continuously improve and scale your product alongside your business, to ensure alignment with your goals and adaptation to future challenges.",
   },
 ];
 
@@ -62,25 +62,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
+      "NexaWings made my SAAS idea a reality with GoCPT! This AI powered software will revolutionize healthcare billing.",
+    name: "Tiffinne Perkins",
+    title: "Medical Professional",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
+      "Storyia has been brought to life in an exceptional manner by NexaWings. They totally exceeded all our expectations.",
+    name: "Fehym Evo",
+    title: "Entrepreneur",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
+      "NexaWings played a pivotal role in transforming my restaurant operations. Their expertise in implementing AI chatbots significantly improved my customer operations.",
+    name: "Rory Russel",
+    title: "Restaraunt Owner",
     img: people03,
   },
 ];
@@ -88,18 +88,18 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Hours Saved",
+    value: "1700+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Clients Served",
+    value: "40+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Saved in Operations",
+    value: "$70k+",
   },
 ];
 

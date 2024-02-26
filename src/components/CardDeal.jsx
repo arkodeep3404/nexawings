@@ -7,12 +7,9 @@ const CardDeal = () => {
   return (
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
-        <h2 className={styles.heading2}>Find a better card deal <br className='sm:block hidden'/>in few easy steps.</h2>
+        <h2 className={styles.heading2}>Custom Software<br className='sm:block hidden'/>Development</h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Arcu tortor,
-          purus in mattis at sed integer faucibus.
-          Aliquet quis aliquet eget mauris tortor.ç 
-          Aliquet ultrices ac, ametau.
+          Custom Web Applications <br/> Customer Support Software <br/> Enterprise Software <br/> Custom CRM and Dashboard
         </p>
         <Button styles='mt-10'/>
       </div>
