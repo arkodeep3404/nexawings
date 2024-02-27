@@ -12,7 +12,7 @@ import {
   dropbox,
   send,
   shield,
-  star
+  star,
 } from "../assets";
 
 export const navLinks = [
