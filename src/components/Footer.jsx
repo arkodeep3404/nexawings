@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
-        <div className="flex-1 flex flex-col justify-start mr-10">
+        <div className="flex-1 flex flex-col justify-center mr-10 ml-5 h-[200px]">
           <img
             src={logo}
             alt="NexaWings"
-            className="w-[266px] h-[172px] object-contain bg-white h-16"
+            className="w-[266px] object-contain bg-white h-16"
           />
           <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
             Your business, our AI expertise.
@@ -51,8 +51,7 @@ const Footer = () => {
             target="_blank"
             className="text-cyan-300"
           >
-            {" "}
-            Arkodeep Chatterjee.{" "}
+            Arkodeep Chatterjee.
           </a>
         </p>
         <div className="flex flex-row md:mt-0 mt-6">

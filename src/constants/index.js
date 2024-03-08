@@ -6,10 +6,10 @@ import {
   instagram,
   linkedin,
   twitter,
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
+  microsoft,
+  aws,
+  chatgpt,
+  langchain,
   send,
   shield,
   star,
@@ -195,18 +195,18 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    logo: microsoft,
   },
   {
     id: "client-2",
-    logo: binance,
+    logo: aws,
   },
   {
     id: "client-3",
-    logo: coinbase,
+    logo: chatgpt,
   },
   {
     id: "client-4",
-    logo: dropbox,
+    logo: langchain,
   },
 ];

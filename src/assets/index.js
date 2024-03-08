@@ -1,9 +1,9 @@
-import airbnb from "./airbnb.png";
+import microsoft from "./microsoft.png";
 import bill from "./bill.png";
-import binance from "./binance.png";
+import aws from "./aws.png";
 import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
+import chatgpt from "./chatgpt.png";
+import langchain from "./langchain.png";
 import logo from "./logo.png";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
@@ -25,12 +25,12 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 
 export {
-  airbnb,
+  microsoft,
   bill,
-  binance,
+  aws,
   card,
-  coinbase,
-  dropbox,
+  chatgpt,
+  langchain,
   logo,
   quotes,
   robot,
