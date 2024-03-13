@@ -8,11 +8,12 @@ const Footer = () => {
     <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-center mr-10 ml-5 h-[200px]">
-          <img
-            src={logo}
-            alt="NexaWings"
-            className="w-[266px] object-contain bg-white h-16"
-          />
+          <div className="flex items-center">
+            <img src={logo} alt="NexaWings" className="object-contain h-16" />
+            <div className="font-poppins font-medium text-[36px] m-1 bg-gradient-to-r from-green-400 via-cyan-400 to-cyan-500 bg-clip-text text-transparent">
+              NexaWings
+            </div>
+          </div>
           <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
             Your business, our AI expertise.
           </p>
