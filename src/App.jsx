@@ -10,6 +10,7 @@ import {
   Navbar,
   Stats,
   Testimonials,
+  Contact,
 } from "./components";
 import styles from "./style";
 
@@ -36,6 +37,7 @@ const App = () => {
           <Clients />
           <CTA />
           <Footer />
+          <Contact />
         </div>
       </div>
     </div>
