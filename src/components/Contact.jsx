@@ -20,6 +20,12 @@ const Contact = () => {
       mode: "no-cors",
       body: formData,
     });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+
+    alert("Thank You");
   }
 
   return (
@@ -39,6 +45,7 @@ const Contact = () => {
             required
             type="text"
             placeholder="Name"
+            value={Name}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             onChange={(e) => setName(e.target.value)}
           />
@@ -50,6 +57,7 @@ const Contact = () => {
             required
             type="text"
             placeholder="Email"
+            value={Email}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -62,6 +70,7 @@ const Contact = () => {
             rows={5}
             type="text"
             placeholder="Message"
+            value={Message}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             onChange={(e) => setMessage(e.target.value)}
           />
