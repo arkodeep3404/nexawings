@@ -6,24 +6,22 @@ const Download = () => {
   return (
     <section>
       <Element
-        name="download"
+        name="discount"
         className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
         <div className="container">
           <div className="flex items-center">
             <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
-              <div className="mb-10">
-                <img
-                  src="/images/xora.svg"
-                  width={160}
-                  height={55}
-                  alt="xora"
-                />
+              <div className="mb-10 flex">
+                <img src="/icon.png" width={50} height={50} alt="xora" />
+                <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5 p-2">
+                  NexaWings
+                </div>
               </div>
 
               <p className="body-1 mb-10 max-w-md">
-                Try it now for free on iOS, Android, PC, Web - whatever your
-                flavor, we've got you covered.
+                Contact us today and get an exclusive limited period discount on
+                cross platform development
               </p>
 
               <ul className="flex flex-wrap items-center gap-6">
@@ -32,10 +30,7 @@ const Download = () => {
                     key={id}
                     className="download_tech-link download_tech-link_last-before download_tech-link_last-after"
                   >
-                    <a
-                      href={url}
-                      className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
-                    >
+                    <a className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500">
                       <span className="absolute -top-2 rotate-90">
                         <Marker />
                       </span>

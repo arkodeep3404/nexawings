@@ -9,7 +9,7 @@ const Testimonials = () => {
       <div className="container block lg:flex">
         <div className="testimonials_head-res relative z-2 mr-20 flex-300">
           <p className="caption mb-5 max-md:mb-2.5">Wall of Love</p>
-          <h3 className="h3 max-md:h5 text-p4">Words from our fans</h3>
+          <h3 className="h3 max-md:h5 text-p4">Words from Customers</h3>
         </div>
 
         <div className="testimonials_inner-after testimonials_inner-before relative -my-12 -mr-3 flex items-start max-lg:static max-md:block">
