@@ -41,7 +41,12 @@ const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
-          <img src="/images/xora.svg" width={115} height={55} alt="logo" />
+          <div className="flex items-center">
+            <img src="/icon.png" alt="logo" className="h-14 w-14" />
+            <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h6 p-2">
+              NexaWings
+            </div>
+          </div>
         </a>
 
         <div

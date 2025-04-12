@@ -49,63 +49,66 @@ export const details = [
 export const faq = [
   {
     id: "0",
-    question: "How easy is it to setup Xora?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+    question: "How to contact you for my project?",
+    answer: (
+      <>
+        You can reach out to us at <b>contact@nexawings.com</b>
+      </>
+    ),
   },
   {
     id: "1",
-    question: "Can I integrate Xora with other platforms?",
+    question: "How much time will it take to develop my product?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "Depending upon your requirements and the complexity of the project it can take anywhere from 2-3 weeks to 4-5 months.",
   },
   {
     id: "2",
-    question: "How often do you add new content?",
+    question: "Do you offer support & maintenance after project completion?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "Yes Absolutely. Our team offers dedicated monthly maintenance and support contracts after the project is completed to cater towards all your needs.",
   },
   {
     id: "3",
-    question: "What your refund policy?",
+    question: "Do you offer refunds?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We offer partial refunds on a case to case basis. Please contact us on email for further details.",
   },
   {
     id: "4",
-    question: "Do you have corporate plans?",
+    question: "Do you have corporate/enterprise plans?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We develop specialized plans for big companies and projects. Please drop an email to know more.",
   },
   {
     id: "5",
-    question: "What happens when I’m out of storage?",
+    question: "What happens if I run out of storage?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "No worries. We offer extra storage upgrade plans at very reasonable prices.",
   },
   {
     id: "6",
-    question: "Can I upgrade my plan?",
+    question: "Can I upgrade my plan in between the development process?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "You you can. Please reach out to our team via email and we will handle your requirements accordingly.",
   },
   {
     id: "7",
-    question: "How do I invite my team?",
+    question: "How many developers will work on my project?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "Depending upon your project complexity and timelines we usually assign 2 to 4 devs to work on a particular project. However if you have any specific needs, please drop an email and our team will get back to you.",
   },
   {
     id: "8",
-    question: "Do you offer training for individuals and teams?",
+    question: "Do you offer training and documentation for the project?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We will work with your team after the development is completed to ensure that everyone has a proper understanding of the developed product.",
   },
   {
     id: "9",
-    question: "I’m locked out of my account what do I do?",
+    question: "What are the payment terms?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We take up a 20% to 30% advance before starting and the rest of the payment is split into milestones.",
   },
 ];
 
@@ -160,51 +163,51 @@ export const plans = [
 export const testimonials = [
   {
     id: "0",
-    name: "Jessica Saunders",
-    role: "Globalnomads",
+    name: "Tiffany Perkins",
+    role: "GoCPT AI",
     avatarUrl: "/images/testimonials/jessica-saunders.png",
     comment:
-      "Xora's customer support is second to none! They’re like my tech superheroes, always there when I need them.",
+      "NexaWings integrated OpenAI’s GPT-4o into our customer support workflow, and the difference has been night and day. Our response time dropped, customer satisfaction shot up, and we saved hours every week. Brilliant execution!",
   },
   {
     id: "1",
-    name: "Mark Erixon",
-    role: "Vid capital intl",
+    name: "Scott Guy",
+    role: "Storyia",
     avatarUrl: "/images/testimonials/mark-erixon.png",
     comment:
-      "I was skeptical at first, but now I can't imagine our content operations without it. It's that impactful.",
+      "I’ve worked with a few tech teams before, but the clarity and speed of NexaWings stood out. They built our mobile app, deployed it on the cloud, and even handled CRM integration—seamlessly. Total peace of mind.",
   },
   {
     id: "2",
-    name: "Melanie Hurst",
-    role: "Cyberleap",
+    name: "Christopher Kelley",
+    role: "SoftCube AI",
     avatarUrl: "/images/testimonials/melanie-hurst.png",
     comment:
-      "Adopting this software was a breeze. It's made everyday tasks so much simpler.",
+      "We came to NexaWings with just an idea. Within weeks, they turned it into a fully functional web app. Their full stack development team is incredibly efficient, and the end result was better than we imagined. Truly impressed!",
   },
   {
     id: "3",
-    name: "Alicia Barker",
-    role: "Cyberleap",
+    name: "Dr. Reine",
+    role: "TopGrep Tech",
     avatarUrl: "/images/testimonials/alicia-barker.png",
     comment:
-      "The analytics feature is like having a personal fortune teller. It's been instrumental in guiding our business decisions.",
+      "We needed an AI chatbot to handle student queries 24/7, and NexaWings delivered an incredibly smart and human-like agent. Their understanding of AI was deep, and they tailored everything to our exact needs.",
   },
   {
     id: "4",
-    name: "Becky Snider",
-    role: "Floclips",
+    name: "Chris Hylander",
+    role: "Galva AI",
     avatarUrl: "/images/testimonials/becky-snider.png",
     comment:
-      "Switched to Xora last month, and I'm already seeing results. Best decision for our team!",
+      "Our startup needed an MVP in less than two months. NexaWings not only delivered on time but gave us something scalable and production-ready. Their full stack developers are a dream to work with.",
   },
   {
     id: "5",
-    name: "Jim Bradley",
-    role: "Vid capital intl",
+    name: "Devangi Agarwal",
+    role: "ÆXLRT",
     avatarUrl: "/images/testimonials/jim-bradley.png",
     comment:
-      "The efficiency boost is undeniable. This platform has transformed our workflow, forever.",
+      "From cloud deployment to building a custom dashboard with CRM tools, NexaWings handled it all. Their team made sure everything was optimized and user-friendly. Can't recommend them enough!",
   },
 ];
 
