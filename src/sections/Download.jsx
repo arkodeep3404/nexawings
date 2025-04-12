@@ -13,7 +13,7 @@ const Download = () => {
           <div className="flex items-center">
             <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
               <div className="mb-10 flex items-center">
-                <img src="icon.png" alt="logo" className="h-16 w-16" />
+                <img src="/images/icon.png" alt="logo" className="h-16 w-16" />
                 <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5 p-2">
                   NexaWings
                 </div>

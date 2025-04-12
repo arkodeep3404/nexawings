@@ -4,7 +4,7 @@ export const features = [
     icon: "/images/feature-1.png",
     caption: "Full Stack Development",
     title: "Comprehensive development assistance for all your needs",
-    text: "At NexaWings, our expert team offers production ready full stack web and app development services to convert your ideas into real working products.",
+    text: "At NexaWings, our expert team offers production ready full stack web and app development solutions to convert your ideas into real working products.",
     button: {
       icon: "/images/magictouch.svg",
       title: "Get in Touch",
