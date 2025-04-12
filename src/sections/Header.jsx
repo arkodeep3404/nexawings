@@ -42,7 +42,7 @@ const Header = () => {
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <div className="flex items-center">
-            <img src="/icon.png" alt="logo" className="h-14 w-14" />
+            <img src="icon.png" alt="logo" className="h-14 w-14" />
             <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h6 p-2">
               NexaWings
             </div>
@@ -74,7 +74,7 @@ const Header = () => {
                       "max-lg:hidden transition-transform duration-500 cursor-pointer flex items-center justify-center"
                     )}
                   >
-                    <img src="/icon.png" width={50} height={50} alt="logo" />
+                    <img src="icon.png" width={50} height={50} alt="logo" />
                     <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5 p-2">
                       NexaWings
                     </div>
