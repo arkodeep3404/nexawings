@@ -195,7 +195,7 @@ export const testimonials = [
   },
   {
     id: "4",
-    name: "Chris Hylander",
+    name: "Patrik Hylander",
     role: "Galva AI",
     avatarUrl: "/images/testimonials/becky-snider.png",
     comment:
