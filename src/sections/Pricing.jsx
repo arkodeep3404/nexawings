@@ -147,7 +147,12 @@ const Pricing = () => {
                 </ul>
 
                 <div className="mt-10 flex w-full justify-center">
-                  <Button icon={plan.icon}>Get Started</Button>
+                  <a
+                    href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
+                    target="_blank"
+                  >
+                    <Button icon={plan.icon}>Get Started</Button>
+                  </a>
                 </div>
 
                 {index === 1 && (

@@ -16,9 +16,14 @@ const Hero = () => {
             <p className="max-w-440 mb-14 body-1 max-md:mb-10">
               NexaWings helps you in bringing your ideas to life
             </p>
-            <LinkScroll to="features" offset={-100} spy smooth>
-              <Button icon="/images/zap.svg">Start Now</Button>
-            </LinkScroll>
+            {/* <LinkScroll to="features" offset={-100} spy smooth> */}
+              <a
+                href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
+                target="_blank"
+              >
+                <Button icon="/images/zap.svg">Start Now</Button>
+              </a>
+            {/* </LinkScroll> */}
           </div>
 
           <div className="absolute -top-32 left-[calc(50%-340px)] w-[1230px] pointer-events-none hero-img_res">

@@ -52,7 +52,10 @@ export const faq = [
     question: "How to contact you for my project?",
     answer: (
       <>
-        You can reach out to us at <b>contact@nexawings.com</b>
+        Please book a call
+        <a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank">
+          <b> here</b>
+        </a>
       </>
     ),
   },
@@ -60,7 +63,7 @@ export const faq = [
     id: "1",
     question: "How much time will it take to develop my product?",
     answer:
-      "Depending upon your requirements and the complexity of the project it can take anywhere from 2-3 weeks to 4-5 months.",
+      "Depending upon your requirements and the complexity of the project it can take anywhere from 2-3 weeks to 3-4 months.",
   },
   {
     id: "2",
@@ -108,7 +111,7 @@ export const faq = [
     id: "9",
     question: "What are the payment terms?",
     answer:
-      "We take up a 20% to 30% advance before starting and the rest of the payment is split into milestones.",
+      "We take a 25% to 30% advance before starting and the remaining amount is split into milestones.",
   },
 ];
 

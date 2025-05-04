@@ -31,7 +31,12 @@ const Features = () => {
                   {title}
                 </h2>
                 <p className="mb-11 body-1 max-md:mb-8 max-md:body-3">{text}</p>
-                <Button icon={button.icon}>{button.title}</Button>
+                <a
+                  href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
+                  target="_blank"
+                >
+                  <Button icon={button.icon}>{button.title}</Button>
+                </a>
               </div>
             ))}
 
