@@ -7,9 +7,9 @@ const WORKFLOW_STEPS = [
     id: 1,
     title: "1. Event Trigger",
     subtitle: "Real-time Webhook",
-    desc: "Webhook fires upon event creation in external source systems (e.g., Stripe invoice paid).",
+    desc: "Webhook fires upon event creation in external billing gateways or support channels.",
     status: "waiting", // 'waiting', 'active', 'completed'
-    system: "Stripe",
+    system: "Sovereign Webhook Node",
     badgeColor: "#635bff",
     icon: (
       <svg className="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -23,7 +23,7 @@ const WORKFLOW_STEPS = [
     subtitle: "Integrations Fabric",
     desc: "NexaWings normalizes custom payload variables into unified, standard data models.",
     status: "waiting",
-    system: "Bindbee Core",
+    system: "Unified API Gateway",
     badgeColor: "#2EF2FF",
     icon: (
       <svg className="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -34,10 +34,10 @@ const WORKFLOW_STEPS = [
   {
     id: 3,
     title: "3. Sovereign Brain Audit",
-    subtitle: "Zero-Hallucination Agent",
-    desc: "Secure Llama-3-70B model parses details and checks against internal PDF audit rules inside your VPC.",
+    subtitle: "Bedrock RAG Model",
+    desc: "Secure foundation model parses details and checks against internal policy rules inside your VPC.",
     status: "waiting",
-    system: "EMVO Brain",
+    system: "AWS Bedrock Brain",
     badgeColor: "#3C52D9",
     icon: (
       <svg className="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -47,11 +47,11 @@ const WORKFLOW_STEPS = [
   },
   {
     id: 4,
-    title: "4. Autonomous Actions",
-    subtitle: "Stateful Pod writeback",
-    desc: "Intelligence pod triggers writebacks to Salesforce CRM and reports success via Slack alerts.",
+    title: "4. Sandboxed Actions",
+    subtitle: "Lambda Tool Execution",
+    desc: "Intelligence pod triggers writebacks to CRM databases and dispatches alerts via secure comm nodes.",
     status: "waiting",
-    system: "Langslide Pods",
+    system: "AWS Lambda Sandbox",
     badgeColor: "#C8EA80",
     icon: (
       <svg className="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -88,7 +88,7 @@ const Playground = () => {
     if (activeStep > steps.length) {
       setIsRunning(false);
       setActiveStep(null);
-      addLog("✔ PIPELINE SUCCESS: Workflow execution complete with 100% reliability.");
+      addLog("✔ PIPELINE SUCCESS: Agent tool execution complete with 100% security isolation.");
       return;
     }
 
@@ -107,31 +107,32 @@ const Playground = () => {
     // Run animation log sequence
     let timer;
     if (activeStep === 1) {
-      addLog("Initializing Stripe event listener...");
+      addLog("Initializing Billing Gateway Webhook listener...");
       timer = setTimeout(() => {
         addLog("Event matched: Invoice #INV-89104 Paid ($1,499.00).");
         setActiveStep(2);
       }, 2500);
     } else if (activeStep === 2) {
-      addLog("Invoking Bindbee integrations fabric...");
+      addLog("Invoking Unified Integrations Fabric...");
       timer = setTimeout(() => {
-        addLog("Mapping custom data to 'UnifiedInvoice' JSON schema.");
+        addLog("Mapping custom payload data to 'UnifiedInvoice' JSON schema.");
         addLog("Data normalized: base_amount: 1499.00, currency: USD.");
         setActiveStep(3);
       }, 2500);
     } else if (activeStep === 3) {
-      addLog("Spinning up EMVO Sovereign Brain inside AWS VPC...");
+      addLog("Spinning up Sovereign AI Brain in AWS Bedrock (VPC)...");
       timer = setTimeout(() => {
         addLog("RAG query matched: checking compliance guidelines Section 4.2.");
-        addLog("Llama-3 audit verdict: Invoice fits policy. No hallucinations detected.");
+        addLog("Bedrock audit verdict: Invoice fits policy. No hallucinations detected.");
         setActiveStep(4);
       }, 3000);
     } else if (activeStep === 4) {
-      addLog("Orchestrating autonomous actions with Langslide Pod...");
+      addLog("Orchestrating autonomous tool actions in AWS Lambda sandbox...");
       timer = setTimeout(() => {
-        addLog("Triggering bi-directional writeback to Salesforce CRM.");
-        addLog("Salesforce Opportunity synced successfully.");
-        addLog("Dispatching webhook notification to Slack channel #billing-ops.");
+        addLog("Decrypting third-party credential token via AWS KMS...");
+        addLog("Triggering bi-directional tool writeback to Enterprise CRM.");
+        addLog("CRM Opportunity synced successfully.");
+        addLog("Dispatching webhook notification to Secure Comms Channel.");
         setActiveStep(5);
       }, 3000);
     }
@@ -208,11 +209,11 @@ const Playground = () => {
                         <span style={{ color: step.badgeColor }}>{step.icon}</span>
                       </div>
 
-                      <h3 className="text-sm font-bold text-p4 uppercase tracking-wider mb-1">{step.title}</h3>
-                      <span className="text-[10px] text-p5/60 font-semibold uppercase block mb-3">{step.subtitle}</span>
-                      <p className="text-[11px] text-p5 leading-relaxed mb-4">{step.desc}</p>
+                      <h3 className="text-sm font-bold text-p4 uppercase tracking-wider mb-1 text-left">{step.title}</h3>
+                      <span className="text-[10px] text-p5/60 font-semibold uppercase block mb-3 text-left">{step.subtitle}</span>
+                      <p className="text-[11px] text-p5 leading-relaxed mb-4 text-left">{step.desc}</p>
                       
-                      <div className="text-[9px] font-mono text-p5/40">
+                      <div className="text-[9px] font-mono text-p5/40 text-left">
                         Running on: <span className="text-p4 font-bold">{step.system}</span>
                       </div>
                     </div>
@@ -253,10 +254,10 @@ const Playground = () => {
                     </button>
                   </div>
 
-                  <div className="space-y-2.5 text-[10px] leading-relaxed">
+                  <div className="space-y-2.5 text-[10px] leading-relaxed text-left">
                     {simLogs.length === 0 ? (
                       <div className="text-p5/30 italic text-center py-10">
-                        Press "Launch Pipeline Simulator" to run the autonomous system demonstration.
+                        Press \"Launch Pipeline Simulator\" to run the autonomous tool execution demonstration.
                       </div>
                     ) : (
                       simLogs.map((log, index) => {

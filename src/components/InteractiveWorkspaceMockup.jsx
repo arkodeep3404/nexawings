@@ -3,19 +3,21 @@ import React, { useState, useEffect } from "react";
 const InteractiveWorkspaceMockup = () => {
   const [activeTab, setActiveTab] = useState("brain"); // 'integration', 'brain', 'pod'
   const [logs, setLogs] = useState([
-    { id: 1, time: "00:04:10", msg: "Fabric: BamboorHR sync completed" },
-    { id: 2, time: "00:04:12", msg: "Brain: Fine-tuned parameters loaded" },
-    { id: 3, time: "00:04:15", msg: "Pod: Multi-agent execution loop started" },
+    { id: 1, time: "14:40:10", msg: "AWS KMS: Decrypted API credentials successfully" },
+    { id: 2, time: "14:40:12", msg: "AWS Bedrock: Loaded sovereign fine-tuned parameters" },
+    { id: 3, time: "14:40:15", msg: "AWS Lambda: Active Python sandboxed tool execution started" },
   ]);
 
   useEffect(() => {
     const messages = [
-      "Fabric: CRM records pulled (Salesforce)",
+      "Fabric: CRM record payload pulled & normalized",
       "Brain: Hallucination score: 0.00% (Semantically Grounded)",
-      "Pod: Billing reconciliation task triggered",
-      "Fabric: Hubspot webhook processed",
-      "Pod: Sovereign agent successfully wrote back to ERP",
-      "Brain: Custom policy guidelines verified",
+      "Orchestrator: Billing reconciliation loop triggered",
+      "Fabric: HRIS database sync webhook processed",
+      "Orchestrator: Sovereign agent successfully wrote back to ERP",
+      "Brain: Custom policy guidelines verified inside AWS VPC",
+      "AWS KMS: Auto-rotated credentials key successfully",
+      "AWS Lambda: Closed secure Python script runtime container",
     ];
 
     const interval = setInterval(() => {
@@ -45,7 +47,7 @@ const InteractiveWorkspaceMockup = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-p1 opacity-75"></span>
             <span className="relative inline-flex rounded-full size-1.5 bg-p1"></span>
           </span>
-          <span className="text-[9px] font-bold text-p1 uppercase tracking-wider">VPC SECURE</span>
+          <span className="text-[9px] font-bold text-p1 uppercase tracking-wider">AWS VPC SECURE</span>
         </div>
       </div>
 
@@ -73,7 +75,7 @@ const InteractiveWorkspaceMockup = () => {
             </circle>
           </svg>
 
-          {/* Node 1: Unified Integrations */}
+          {/* Node 1: Tool Actions & MCP Gateway */}
           <button 
             onClick={() => setActiveTab("integration")}
             className={`z-10 flex flex-col items-center p-3 rounded-xl border transition-all duration-300 ${
@@ -84,11 +86,12 @@ const InteractiveWorkspaceMockup = () => {
           >
             <div className="size-12 rounded-lg bg-p1/10 flex items-center justify-center border border-p1/30 mb-2">
               <svg className="size-6 text-p1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <span className="text-[10px] font-bold text-p4 uppercase tracking-wider">Integrations</span>
-            <span className="text-[8px] text-p5/60 mt-0.5">100+ Connectors</span>
+            <span className="text-[10px] font-bold text-p4 uppercase tracking-wider">Tool Actions</span>
+            <span className="text-[8px] text-p5/60 mt-0.5">MCP Gateway</span>
           </button>
 
           {/* Node 2: Sovereign AI Brain */}
@@ -108,7 +111,7 @@ const InteractiveWorkspaceMockup = () => {
               </svg>
             </div>
             <span className="text-[11px] font-bold text-p4 uppercase tracking-wider">Sovereign Brain</span>
-            <span className="text-[8px] text-p3 font-medium mt-0.5">Zero-Hallucination</span>
+            <span className="text-[8px] text-p3 font-medium mt-0.5">AWS Bedrock</span>
           </button>
 
           {/* Node 3: Intelligence Pod */}
@@ -125,8 +128,8 @@ const InteractiveWorkspaceMockup = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
-            <span className="text-[10px] font-bold text-p4 uppercase tracking-wider">Agent Pod</span>
-            <span className="text-[8px] text-p5/60 mt-0.5">Stateful Loops</span>
+            <span className="text-[10px] font-bold text-p4 uppercase tracking-wider">Orchestrator</span>
+            <span className="text-[8px] text-p5/60 mt-0.5">Intelligence Pods</span>
           </button>
         </div>
 
@@ -137,15 +140,15 @@ const InteractiveWorkspaceMockup = () => {
           <div className="p-4 rounded-xl border border-s3/40 bg-s1/40 flex flex-col justify-between min-h-[160px]">
             {activeTab === "integration" && (
               <div>
-                <h4 className="text-xs font-bold text-p1 uppercase tracking-wider mb-2">Unified Sync Fabric</h4>
-                <p className="text-[11px] text-p5 leading-relaxed">
-                  Real-time normalized data models for business operations. Integrates natively with ATS, HRIS, CRM, and databases.
+                <h4 className="text-xs font-bold text-p1 uppercase tracking-wider mb-2">Composio-backed Tool Actions</h4>
+                <p className="text-[11px] text-p5 leading-relaxed text-left">
+                  Allows agents to safely execute local code sandboxes and call secure APIs. Built-in Model Context Protocol (MCP) gateway.
                 </p>
-                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono">
-                  <div className="text-p5/70">Sync Rate: <span className="text-p4 font-bold">12ms latency</span></div>
-                  <div className="text-p5/70">Write-back: <span className="text-p3 font-bold">Enabled</span></div>
-                  <div className="text-p5/70">Active Channels: <span className="text-p4 font-bold">108 APIs</span></div>
-                  <div className="text-p5/70">Data Schema: <span className="text-p1 font-bold">Normalized</span></div>
+                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono text-left">
+                  <div className="text-p5/70">Tool Library: <span className="text-p4 font-bold">900+ Actions</span></div>
+                  <div className="text-p5/70">Execution: <span className="text-p3 font-bold">AWS Lambda</span></div>
+                  <div className="text-p5/70">Auth: <span className="text-p4 font-bold">AWS KMS Secure</span></div>
+                  <div className="text-p5/70">Protocol: <span className="text-p1 font-bold">MCP Gateway</span></div>
                 </div>
               </div>
             )}
@@ -153,28 +156,28 @@ const InteractiveWorkspaceMockup = () => {
             {activeTab === "brain" && (
               <div>
                 <h4 className="text-xs font-bold text-p2 uppercase tracking-wider mb-2">Sovereign Brain Parameters</h4>
-                <p className="text-[11px] text-p5 leading-relaxed">
-                  Enterprise-owned LLMs hosted inside your private VPC. Tuned specifically on internal policies with Semantic Grounding.
+                <p className="text-[11px] text-p5 leading-relaxed text-left">
+                  Sovereign LLMs deployed natively inside your private cloud VPC. Tuned specifically on internal documents with semantic grounding.
                 </p>
-                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono">
-                  <div className="text-p5/70">Base LLM: <span className="text-p4 font-bold">Llama-3-70B</span></div>
-                  <div className="text-p5/70">Hosting: <span className="text-p3 font-bold">AWS VPC</span></div>
+                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono text-left">
+                  <div className="text-p5/70">Foundation LLM: <span className="text-p4 font-bold">AWS Bedrock Core</span></div>
+                  <div className="text-p5/70">Isolation: <span className="text-p3 font-bold">AWS VPC Private</span></div>
                   <div className="text-p5/70">Guardrails: <span className="text-p4 font-bold">Policy Aligned</span></div>
-                  <div className="text-p5/70">RAG Context: <span className="text-p2 font-bold">Hybrid Search</span></div>
+                  <div className="text-p5/70">Search Context: <span className="text-p2 font-bold">Sovereign RAG</span></div>
                 </div>
               </div>
             )}
 
             {activeTab === "pod" && (
               <div>
-                <h4 className="text-xs font-bold text-p3 uppercase tracking-wider mb-2">Intelligence Pod State</h4>
-                <p className="text-[11px] text-p5 leading-relaxed">
-                  Stateful, autonomous multi-agent pipelines. Running asynchronous jobs, self-healing retries, and bi-directional updates.
+                <h4 className="text-xs font-bold text-p3 uppercase tracking-wider mb-2">Orchestration Parameters</h4>
+                <p className="text-[11px] text-p5 leading-relaxed text-left">
+                  Stateful, autonomous multi-agent pipelines. Running asynchronous jobs, self-healing retries, and hyper-localized execution.
                 </p>
-                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono">
+                <div className="mt-3 grid grid-cols-2 gap-2 text-[10px] font-mono text-left">
                   <div className="text-p5/70">Active Pods: <span className="text-p4 font-bold">12 Running</span></div>
                   <div className="text-p5/70">Self-Healing: <span className="text-p3 font-bold">Activated</span></div>
-                  <div className="text-p5/70">Orchestrator: <span className="text-p4 font-bold">Visual Canvas</span></div>
+                  <div className="text-p5/70">Language Scope: <span className="text-p4 font-bold">Hyper-Localized</span></div>
                   <div className="text-p5/70">Fail Safe: <span className="text-p3 font-bold">Active</span></div>
                 </div>
               </div>
@@ -194,7 +197,7 @@ const InteractiveWorkspaceMockup = () => {
                 <div className="size-1.5 rounded-full bg-p1 animate-pulse" />
                 <span className="text-[10px] font-bold text-p4 uppercase tracking-wider">SYSTEM_LOGS</span>
               </div>
-              <div className="space-y-1.5 text-[9px] leading-relaxed select-none">
+              <div className="space-y-1.5 text-[9px] leading-relaxed select-none text-left">
                 {logs.map((log) => (
                   <div key={log.id} className="flex items-start">
                     <span className="text-p5/40 mr-2">[{log.time}]</span>

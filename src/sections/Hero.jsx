@@ -10,15 +10,15 @@ const Hero = () => {
           {/* Left Column: Product Branding Copy */}
           <div className="w-full lg:w-[50%] flex flex-col items-start text-left">
             <div className="caption small-2 uppercase text-p3 mb-4 tracking-widest">
-              Sovereign AI &amp; Integrations OS
+              Sovereign AI &amp; Agentic Action OS
             </div>
             <h1 className="mb-6 text-[40px] sm:text-[60px] xl:text-[72px] leading-[1.05] font-black uppercase text-p4 tracking-tight">
-              AI Agents.<br />
+              Sovereign AI.<br />
               Orchestrated.<br />
-              <span className="text-p1">Unified.</span>
+              <span className="text-p1">Executed.</span>
             </h1>
             <p className="max-w-md mb-10 text-[16px] sm:text-[18px] text-p5 leading-relaxed">
-              NexaWings merges sovereign domain-expert brains, autonomous workflows, and 100+ unified read/write API connectors into a single secure platform. Deploy to your cloud under absolute privacy.
+              NexaWings unifies sovereign domain-expert brains, stateful multi-agent workflows, and secure sandboxed tool execution. Natively powered by AWS Bedrock for sovereign model pipelines and AWS KMS for encrypted credential isolation.
             </p>
             <a
               href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"

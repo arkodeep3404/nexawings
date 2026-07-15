@@ -12,10 +12,10 @@ client = nexawings.Client(
     host="https://sovereign.nexawings.internal"
 )
 
-# 1. Query Sovereign RAG Brain
-brain = client.brains.get("legal-compliance-audit")
+# 1. Query Sovereign RAG Brain (Connected via AWS Bedrock)
+brain = client.brains.get("invoice-compliance-agent")
 response = brain.query(
-    prompt="Audit invoice #8910 against guidelines",
+    prompt="Audit invoice #8910 against internal corporate guidelines",
     temperature=0.0
 )
 
@@ -24,7 +24,7 @@ run = client.pods.trigger(
     pod_id="billing-reconciliation",
     variables={
         "invoice_data": response.extracted_fields,
-        "erp_target": "netsuite"
+        "erp_target": "internal-erp-database"
     }
 )
 
@@ -47,7 +47,7 @@ const employees = await client.integrations.queryUnified({
   filter: { 'status': 'active' }
 });
 
-// Run safety audit via VoiceShield guardrails
+// Run safety audit via VoiceShield speech safety guardrails
 const auditResult = await client.security.voiceShield({
   audioStream: audioInput,
   policies: ['compliance-rule-4a', 'anti-phishing']

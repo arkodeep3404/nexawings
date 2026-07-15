@@ -3,13 +3,13 @@ import { Element } from "react-scroll";
 
 const INTEGRATIONS_DATA = [
   {
-    id: "workday",
-    name: "Workday",
+    id: "hris_sovereign",
+    name: "Sovereign HRIS Interface",
     category: "HRIS",
     status: "Active",
     color: "#ff8a00",
     json: {
-      integration: "Workday",
+      integration: "Sovereign HRIS Interface",
       data_model: "UnifiedEmployee",
       sync_status: "synced",
       last_sync: "12ms ago",
@@ -29,13 +29,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "salesforce",
-    name: "Salesforce",
+    id: "crm_enterprise",
+    name: "Enterprise CRM Node",
     category: "CRM",
     status: "Active",
     color: "#00a1e0",
     json: {
-      integration: "Salesforce",
+      integration: "Enterprise CRM Node",
       data_model: "UnifiedAccount",
       sync_status: "synced",
       last_sync: "4ms ago",
@@ -53,13 +53,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "bamboohr",
-    name: "BambooHR",
+    id: "hris_regional",
+    name: "Regional HRIS Node",
     category: "HRIS",
     status: "Active",
     color: "#5ca823",
     json: {
-      integration: "BambooHR",
+      integration: "Regional HRIS Node",
       data_model: "UnifiedTimeOff",
       sync_status: "synced",
       last_sync: "18ms ago",
@@ -74,13 +74,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "greenhouse",
-    name: "Greenhouse",
+    id: "candidate_portal",
+    name: "Candidate Pipeline Portal",
     category: "ATS",
     status: "Active",
     color: "#00b074",
     json: {
-      integration: "Greenhouse",
+      integration: "Candidate Pipeline Portal",
       data_model: "UnifiedCandidate",
       sync_status: "synced",
       last_sync: "32ms ago",
@@ -95,13 +95,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "hubspot",
-    name: "HubSpot",
+    id: "client_data_core",
+    name: "Client Data Core",
     category: "CRM",
     status: "Active",
     color: "#ff7a59",
     json: {
-      integration: "HubSpot",
+      integration: "Client Data Core",
       data_model: "UnifiedContact",
       sync_status: "synced",
       last_sync: "8ms ago",
@@ -115,13 +115,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "lever",
-    name: "Lever",
+    id: "recruitment_db",
+    name: "Recruitment Database",
     category: "ATS",
     status: "Idle",
     color: "#4e5be6",
     json: {
-      integration: "Lever",
+      integration: "Recruitment Database",
       data_model: "UnifiedJobPosting",
       sync_status: "idle",
       last_sync: "3h ago",
@@ -135,13 +135,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "adp",
-    name: "ADP Run",
+    id: "payroll_center",
+    name: "Corporate Payroll Center",
     category: "Payroll",
     status: "Active",
     color: "#ad2121",
     json: {
-      integration: "ADP Run",
+      integration: "Corporate Payroll Center",
       data_model: "UnifiedPayrollHistory",
       sync_status: "synced",
       last_sync: "50ms ago",
@@ -155,13 +155,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "slack",
-    name: "Slack Notify",
+    id: "comms_channel",
+    name: "Secure Comms Channel",
     category: "Comms",
     status: "Active",
     color: "#4a154b",
     json: {
-      integration: "Slack Notify",
+      integration: "Secure Comms Channel",
       data_model: "UnifiedMessageOut",
       sync_status: "synced",
       last_sync: "1ms ago",
@@ -177,13 +177,13 @@ const INTEGRATIONS_DATA = [
     },
   },
   {
-    id: "stripe",
-    name: "Stripe",
+    id: "billing_gateway",
+    name: "Billing Gateway Core",
     category: "Payments",
     status: "Active",
     color: "#635bff",
     json: {
-      integration: "Stripe",
+      integration: "Billing Gateway Core",
       data_model: "UnifiedInvoice",
       sync_status: "synced",
       last_sync: "9ms ago",
@@ -379,12 +379,12 @@ const Download = () => {
             {/* Stage 1: SELECT PLATFORM */}
             {modalStage === "list" && (
               <div>
-                <h4 className="text-sm font-bold text-p4 mb-2 uppercase tracking-wide">Connect SaaS Software</h4>
-                <p className="text-[11px] text-p5/70 mb-4 leading-relaxed">
+                <h4 className="text-sm font-bold text-p4 mb-2 uppercase tracking-wide">Connect Software Node</h4>
+                <p className="text-[11px] text-p5/70 mb-4 leading-relaxed text-left">
                   Allow NexaWings to sync datasets from your third-party systems. Choose a platform to verify permissions:
                 </p>
                 <div className="space-y-2 max-h-[220px] overflow-y-auto pr-1">
-                  {INTEGRATIONS_DATA.filter(i => i.id !== "slack" && i.id !== "stripe").map((platform) => (
+                  {INTEGRATIONS_DATA.filter(i => i.id !== "comms_channel" && i.id !== "billing_gateway").map((platform) => (
                     <button
                       key={platform.id}
                       onClick={() => handleSelectPlatform(platform)}
@@ -409,13 +409,13 @@ const Download = () => {
                   <h4 className="text-sm font-bold text-p4 uppercase tracking-wide">Sync with {modalPlatform.name}</h4>
                 </div>
                 
-                <p className="text-[11px] text-p5/70 mb-4 leading-relaxed">
+                <p className="text-[11px] text-p5/70 mb-4 leading-relaxed text-left">
                   Provide credentials for <span className="font-bold text-p4">{modalPlatform.name}</span>. Credentials remain encrypted under zero-knowledge key custody inside your VPC.
                 </p>
 
                 <div className="space-y-3 mb-6">
                   <div>
-                    <label className="text-[9px] font-bold text-p5/40 uppercase block mb-1">Tenant Domain Url</label>
+                    <label className="text-[9px] font-bold text-p5/40 uppercase block mb-1 text-left">Tenant Domain Url</label>
                     <input 
                       type="text" 
                       required 
@@ -424,7 +424,7 @@ const Download = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-[9px] font-bold text-p5/40 uppercase block mb-1">API Key / Token</label>
+                    <label className="text-[9px] font-bold text-p5/40 uppercase block mb-1 text-left">API Key / Token</label>
                     <input 
                       type="password" 
                       required 
