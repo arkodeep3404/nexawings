@@ -7,7 +7,16 @@ const Features = () => {
   return (
     <section>
       <Element name="services">
-        <div className="container">
+        <div className="container pt-20 pb-10">
+          <div className="text-center max-w-2xl mx-auto mb-16 max-md:mb-10">
+            <h2 className="h2 max-md:h4 text-p4 mb-4 uppercase">
+              Core Capabilities
+            </h2>
+            <p className="body-2 max-md:body-3 text-p5 leading-relaxed max-w-lg mx-auto">
+              Sovereign intelligence and drag-and-drop automations working side-by-side inside your network.
+            </p>
+          </div>
+
           <div className="relative flex md:flex-wrap flex-nowrap border-2 border-s3 rounded-7xl md:overflow-hidden max-md:flex-col feature-after md:g7 max-md:border-none max-md:rounded-none max-md:gap-3">
             {features.map(({ id, icon, caption, title, text, button }) => (
               <div

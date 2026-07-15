@@ -18,7 +18,7 @@ const Header = () => {
     };
   }, []);
 
-  const NavLink = ({ title }) => (
+  const NavLink = ({ title, label }) => (
     <LinkScroll
       onClick={() => setIsOpen(false)}
       to={title}
@@ -28,7 +28,7 @@ const Header = () => {
       activeClass="nav-active"
       className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
     >
-      {title}
+      {label || title}
     </LinkScroll>
   );
 
@@ -59,9 +59,9 @@ const Header = () => {
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
-                  <NavLink title="services" />
+                  <NavLink title="services" label="features" />
                   <div className="dot" />
-                  <NavLink title="pricing" />
+                  <NavLink title="playground" label="simulator" />
                 </li>
 
                 <li className="nav-logo">
@@ -87,9 +87,9 @@ const Header = () => {
                 </li>
 
                 <li className="nav-li">
-                  <NavLink title="faq" />
+                  <NavLink title="integrations" label="integrations" />
                   <div className="dot" />
-                  <NavLink title="discount" />
+                  <NavLink title="pricing" label="pricing" />
                 </li>
               </ul>
             </nav>

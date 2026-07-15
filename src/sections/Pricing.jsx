@@ -14,7 +14,7 @@ const Pricing = () => {
         <div className="container">
           <div className="max-w-960 pricing-head_before relative mx-auto border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
             <h3 className="h3 max-lg:h4 max-md:h5 z-3 relative mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
-              Flexible pricing for teams of all sizes
+              Flexible Pricing Built for Enterprise Scale
             </h3>
 
             <div className="relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px] border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px] max-md:w-[310px]">
@@ -162,6 +162,44 @@ const Pricing = () => {
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Feature Comparison Matrix */}
+          <div className="mt-28 max-w-4xl mx-auto hidden md:block">
+            <h3 className="h5 text-p4 text-center uppercase tracking-wider mb-10">
+              Detailed Feature Comparison Matrix
+            </h3>
+            <div className="rounded-3xl border-2 border-s3 bg-s1/60 overflow-hidden shadow-500">
+              <table className="w-full text-left border-collapse text-xs font-mono">
+                <thead>
+                  <tr className="border-b border-s3 bg-s2/40">
+                    <th className="p-5 font-bold text-p4 uppercase tracking-wider">Features</th>
+                    <th className="p-5 font-bold text-p1 uppercase tracking-wider text-center">Core</th>
+                    <th className="p-5 font-bold text-p3 uppercase tracking-wider text-center">Pro</th>
+                    <th className="p-5 font-bold text-p4 uppercase tracking-wider text-center">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Sovereign AI Brains", core: "5 Brains", pro: "Unlimited", ent: "Unlimited + Custom RAG" },
+                    { name: "Stateful Intelligence Pods", core: "10 Pods", pro: "50 Pods", ent: "Unlimited" },
+                    { name: "Unified Connectors", core: "50+ Connectors", pro: "All 100+ Connectors", ent: "All + Custom Schemas" },
+                    { name: "VPC & On-Prem Hosting", core: "✕", pro: "✕", ent: "✓" },
+                    { name: "voiceSHIELD™ Audio Filter", core: "✕", pro: "✓", ent: "✓" },
+                    { name: "SSO & Advanced Governance", core: "✕", pro: "✓", ent: "✓" },
+                    { name: "Dedicated Solutions Architect", core: "✕", pro: "✕", ent: "✓" },
+                    { name: "Support Response Time", core: "Next-day SLA", pro: "4-Hour Priority", ent: "15-Min Dedicated" },
+                  ].map((feature, idx) => (
+                    <tr key={idx} className="border-b border-s3/20 hover:bg-s2/20 transition-all duration-300">
+                      <td className="p-5 text-p4 font-bold text-left">{feature.name}</td>
+                      <td className={`p-5 text-center ${feature.core === "✕" ? "text-p5/30" : "text-p5/70"}`}>{feature.core}</td>
+                      <td className={`p-5 text-center ${feature.pro === "✕" ? "text-p5/30" : "text-p5/80"}`}>{feature.pro}</td>
+                      <td className="p-5 text-p4 font-bold text-center text-p3">{feature.ent}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </Element>

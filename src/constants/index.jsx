@@ -1,24 +1,26 @@
+import React from "react";
+
 export const features = [
   {
     id: "0",
     icon: "/images/feature-1.png",
-    caption: "Full Stack Development",
-    title: "Comprehensive development assistance for all your needs",
-    text: "At NexaWings, our expert team offers production ready full stack web and app development solutions to convert your ideas into real working products.",
+    caption: "Sovereign Intelligence",
+    title: "Domain-Expert AI Brains Hosted in Your Cloud",
+    text: "Deploy production-grade, zero-hallucination AI agents that run inside your secure cloud VPC. Fine-tuned on your internal wikis, databases, and policy documentation under absolute privacy.",
     button: {
       icon: "/images/magictouch.svg",
-      title: "Get in Touch",
+      title: "Build Sovereign Brain",
     },
   },
   {
     id: "1",
     icon: "/images/feature-2.png",
-    caption: "AI Development",
-    title: "Harness the power of AI to grow your business",
-    text: "We help you in utilizing the power of cutting edge AI models like OpenAI GPT 4o and Anthropic Claude 3.5 Sonnet into your workflows to drive business growth, increase retention rates and improve customer satisfaction.",
+    caption: "Agentic Automation",
+    title: "Orchestrate Stateful Multi-Agent Workflows",
+    text: "Design and execute complex, long-running agentic workflows via a visual canvas. Coordinate multiple specialized AI agents, handle data variations, and automate end-to-end loops autonomously.",
     button: {
       icon: "/images/docs.svg",
-      title: "Contact us Today",
+      title: "Design Agent Workflows",
     },
   },
 ];
@@ -27,136 +29,139 @@ export const details = [
   {
     id: "0",
     icon: "/images/detail-1.png",
-    title: "AI ChatBots & Agents",
+    title: "AWS VPC Sovereign Hosting",
   },
   {
     id: "1",
     icon: "/images/detail-2.png",
-    title: "Web & App Development",
+    title: "Unified Read/Write API",
   },
   {
     id: "2",
     icon: "/images/detail-3.png",
-    title: "Cloud Deployment & Management",
+    title: "Stateful Intelligence Pods",
   },
   {
     id: "3",
     icon: "/images/detail-4.png",
-    title: "Customer Support & CRM Solutions",
+    title: "SOC2 & HIPAA Guardrails",
   },
 ];
 
 export const faq = [
   {
     id: "0",
-    question: "How to contact you for my project?",
+    question: "What is NexaWings?",
     answer: (
       <>
-        Please book a call
-        <a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank">
-          <b> here</b>
-        </a>
+        NexaWings is a unified enterprise AI agent and integration operating system. It allows companies to deploy sovereign, non-hallucinating AI brains, orchestrate multi-agent workflows, and integrate with 100+ business systems (CRMs, ERPs, HRIS) using a unified API. You can book a VC pitch deep-dive call{" "}
+        <a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank" rel="noreferrer">
+          <b>here</b>
+        </a>.
       </>
     ),
   },
   {
     id: "1",
-    question: "How much time will it take to develop my product?",
+    question: "How do Sovereign AI Brains prevent hallucinations?",
     answer:
-      "Depending upon your requirements and the complexity of the project it can take anywhere from 2-3 weeks to 3-4 months.",
+      "Our AI Brains utilize advanced semantic grounding, Retrieval-Augmented Generation (RAG), and policy-aligned guardrails. By linking directly to your verified corporate databases, they generate precise, context-aware outputs and cite their sources, eliminating hallucinations.",
   },
   {
     id: "2",
-    question: "Do you offer support & maintenance after project completion?",
+    question: "Can we host the platform in our own AWS or GCP VPC?",
     answer:
-      "Yes Absolutely. Our team offers dedicated monthly maintenance and support contracts after the project is completed to cater towards all your needs.",
+      "Yes, absolutely. Enterprise clients can deploy the entire NexaWings stack, including LLMs, orchestrators, and databases, directly within their own virtual private cloud (VPC) or on-premise air-gapped servers to maintain complete data custody.",
   },
   {
     id: "3",
-    question: "Do you offer refunds?",
+    question: "How does the Unified Integration Fabric simplify connections?",
     answer:
-      "We offer partial refunds on a case to case basis. Please contact us on email for further details.",
+      "Instead of building and maintaining separate integrations for dozens of business systems, developers connect to the NexaWings API once. We normalize data schemas across 100+ CRM, ERP, and HRIS systems, managing syncing, webhooks, and rate limits dynamically.",
   },
   {
     id: "4",
-    question: "Do you have corporate/enterprise plans?",
+    question: "What compliance standards does NexaWings support?",
     answer:
-      "We develop specialized plans for big companies and projects. Please drop an email to know more.",
+      "NexaWings is built with enterprise security at its core, supporting SOC 2 Type II, ISO 27001, GDPR, and HIPAA compliance frameworks to guarantee secure data transmission and storage.",
   },
   {
     id: "5",
-    question: "What happens if I run out of storage?",
+    question: "What are Stateful Intelligence Pods?",
     answer:
-      "No worries. We offer extra storage upgrade plans at very reasonable prices.",
+      "Intelligence Pods are autonomous, stateful agent executors that run long-lived processes. They handle network retries, adapt to schema changes, maintain conversational context over days, and collaborate to solve complex business goals.",
   },
   {
     id: "6",
-    question: "Can I upgrade my plan in between the development process?",
+    question: "Do you support bi-directional data synchronization?",
     answer:
-      "You you can. Please reach out to our team via email and we will handle your requirements accordingly.",
+      "Yes, our unified APIs support both read and write-back functionality. Agents can query data from external databases, make decisions, and write updates back to Salesforce, Workday, or Hubspot instantly.",
   },
   {
     id: "7",
-    question: "How many developers will work on my project?",
+    question: "How many agents and integrations can we deploy?",
     answer:
-      "Depending upon your project complexity and timelines we usually assign 2 to 4 devs to work on a particular project. However if you have any specific needs, please drop an email and our team will get back to you.",
+      "Depending on your tier, we support from 5 up to unlimited Sovereign AI Brains and concurrent workflow execution. Custom enterprise tiers have no limits and include dedicated server instances.",
   },
   {
     id: "8",
-    question: "Do you offer training and documentation for the project?",
+    question: "Do we need developers to build workflow automations?",
     answer:
-      "We will work with your team after the development is completed to ensure that everyone has a proper understanding of the developed product.",
+      "No. NexaWings features a visual, no-code agent builder that allows business operations teams to stitch together triggers, sovereign brains, and system actions in minutes. Developers can still write custom code blocks if needed.",
   },
   {
     id: "9",
-    question: "What are the payment terms?",
+    question: "What kind of support contracts do you offer?",
     answer:
-      "We take a 25% to 30% advance before starting and the remaining amount is split into milestones.",
+      "We provide 24/7 dedicated support, SLA guarantees, custom integration development, and a dedicated Solutions Architect for our Enterprise customers to ensure flawless production deployments.",
   },
 ];
 
 export const plans = [
   {
     id: "0",
-    title: "Base",
-    priceMonthly: 300,
-    priceYearly: 240,
-    caption: "Best for early entrepreneurs",
+    title: "Core",
+    priceMonthly: 499,
+    priceYearly: 399,
+    caption: "Perfect for scaling teams building AI agent pilots.",
     features: [
-      "5GB Cloud Storage",
-      "1 Web App OR 1 Mobile App",
-      "1 Project",
-      "Basic Support",
+      "Up to 5 Sovereign AI Brains",
+      "10 Stateful Intelligence Pods",
+      "50+ Unified API Connectors",
+      "Standard OAuth & Webhooks",
+      "Next-day developer support",
     ],
     icon: "/images/circle.svg",
     logo: "/images/plan-1.png",
   },
   {
     id: "1",
-    title: "Core",
-    priceMonthly: 700,
-    priceYearly: 580,
-    caption: "Our most popular plan",
+    title: "Pro",
+    priceMonthly: 1299,
+    priceYearly: 999,
+    caption: "For high-volume production agent automations.",
     features: [
-      "20% off on cloud bills",
-      "25GB Cloud Storage",
-      "1 Web App OR 1 Mobile App",
-      "Priority Support",
+      "Unlimited Sovereign AI Brains",
+      "50 Stateful Intelligence Pods",
+      "All 100+ Unified API Connectors",
+      "Real-time bi-directional sync",
+      "Priority SLA & Slack support",
     ],
     icon: "/images/triangle.svg",
     logo: "/images/plan-2.png",
   },
   {
     id: "2",
-    title: "Overdrive",
-    priceMonthly: 1200,
-    priceYearly: 1050,
-    caption: "For companies in growth phase",
+    title: "Enterprise",
+    priceMonthly: 2999,
+    priceYearly: 2499,
+    caption: "Absolute data custody and custom engineering.",
     features: [
-      "30% off on cloud bills",
-      "50GB Cloud Storage",
-      "1 Web App AND 1 Mobile App",
-      "Personal contact of CTO",
+      "VPC / On-Premise air-gapped hosting",
+      "Unlimited Brains and Pods",
+      "Custom schemas & dedicated database",
+      "SOC2, HIPAA & GDPR guardrails",
+      "Dedicated Solutions Architect (24/7)",
     ],
     icon: "/images/hexagon.svg",
     logo: "/images/plan-3.png",
@@ -167,50 +172,50 @@ export const testimonials = [
   {
     id: "0",
     name: "Tiffany Perkins",
-    role: "GoCPT AI",
+    role: "VP of Engineering, GoCPT AI",
     avatarUrl: "/images/testimonials/jessica-saunders.png",
     comment:
-      "NexaWings integrated OpenAI’s GPT-4o into our customer support workflow, and the difference has been night and day. Our response time dropped, customer satisfaction shot up, and we saved hours every week. Brilliant execution!",
+      "NexaWings resolved our compliance issues by hosting sovereign AI brains inside our AWS VPC, while sync'ing our CRM and internal database in real-time. Truly a game-changer for enterprise AI.",
   },
   {
     id: "1",
     name: "Scott Guy",
-    role: "Storyia",
+    role: "CTO, Storyia",
     avatarUrl: "/images/testimonials/mark-erixon.png",
     comment:
-      "I’ve worked with a few tech teams before, but the clarity and speed of NexaWings stood out. They built our mobile app, deployed it on the cloud, and even handled CRM integration—seamlessly. Total peace of mind.",
+      "Setting up bi-directional syncing with Workday and Salesforce took our dev team just a few hours using NexaWings' unified integrations fabric. The agentic workflows now handle our billing automatically.",
   },
   {
     id: "2",
     name: "Christopher Kelley",
-    role: "SoftCube AI",
+    role: "Head of AI Operations, SoftCube AI",
     avatarUrl: "/images/testimonials/melanie-hurst.png",
     comment:
-      "We came to NexaWings with just an idea. Within weeks, they turned it into a fully functional web app. Their full stack development team is incredibly efficient, and the end result was better than we imagined. Truly impressed!",
+      "The visual workflow designer allowed our operations team to construct stateful intelligence pods that handle complex claims approvals without needing constant engineering support.",
   },
   {
     id: "3",
     name: "Dr. Reine",
-    role: "TopGrep Tech",
+    role: "Director of Product, TopGrep Tech",
     avatarUrl: "/images/testimonials/alicia-barker.png",
     comment:
-      "We needed an AI chatbot to handle student queries 24/7, and NexaWings delivered an incredibly smart and human-like agent. Their understanding of AI was deep, and they tailored everything to our exact needs.",
+      "Having a zero-hallucination guarantee was our main requirement. NexaWings' grounding guardrails let us roll out AI agents to 50,000 customers in a highly regulated finance environment.",
   },
   {
     id: "4",
     name: "Patrik Hylander",
-    role: "Galva AI",
+    role: "CEO, Galva AI",
     avatarUrl: "/images/testimonials/becky-snider.png",
     comment:
-      "Our startup needed an MVP in less than two months. NexaWings not only delivered on time but gave us something scalable and production-ready. Their full stack developers are a dream to work with.",
+      "We deployed a secure, custom-tuned model on-premise in under two weeks. The performance, privacy, and unified integration features are lightyears ahead of standard iPaaS or LLM tools.",
   },
   {
     id: "5",
     name: "Devangi Agarwal",
-    role: "ÆXLRT",
+    role: "VP of IT Operations, ÆXLRT",
     avatarUrl: "/images/testimonials/jim-bradley.png",
     comment:
-      "From cloud deployment to building a custom dashboard with CRM tools, NexaWings handled it all. Their team made sure everything was optimized and user-friendly. Can't recommend them enough!",
+      "From database connections to role-based access controls, NexaWings provides the robust, compliance-first operating system that enterprise scale AI deployments desperately need.",
   },
 ];
 

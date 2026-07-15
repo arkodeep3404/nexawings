@@ -1,39 +1,46 @@
-import { Element, Link as LinkScroll } from "react-scroll";
+import { Element } from "react-scroll";
 import Button from "../components/Button.jsx";
+import InteractiveWorkspaceMockup from "../components/InteractiveWorkspaceMockup.jsx";
 
 const Hero = () => {
   return (
-    <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+    <section className="relative pt-48 pb-32 max-lg:pt-40 max-lg:pb-24 max-md:pt-28 max-md:pb-20 overflow-hidden">
       <Element name="hero">
-        <div className="container">
-          <div className="relative z-2 max-w-512 max-lg:max-w-388">
-            <div className="caption small-2 uppercase text-p3">
-              Software Development
+        <div className="container relative z-2 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-6">
+          {/* Left Column: Product Branding Copy */}
+          <div className="w-full lg:w-[50%] flex flex-col items-start text-left">
+            <div className="caption small-2 uppercase text-p3 mb-4 tracking-widest">
+              Sovereign AI &amp; Integrations OS
             </div>
-            <h1 className="mb-6 h1 text-p4 uppercase max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
-              Amazingly Efficient
+            <h1 className="mb-6 text-[40px] sm:text-[60px] xl:text-[72px] leading-[1.05] font-black uppercase text-p4 tracking-tight">
+              AI Agents.<br />
+              Orchestrated.<br />
+              <span className="text-p1">Unified.</span>
             </h1>
-            <p className="max-w-440 mb-14 body-1 max-md:mb-10">
-              NexaWings helps you in bringing your ideas to life
+            <p className="max-w-md mb-10 text-[16px] sm:text-[18px] text-p5 leading-relaxed">
+              NexaWings merges sovereign domain-expert brains, autonomous workflows, and 100+ unified read/write API connectors into a single secure platform. Deploy to your cloud under absolute privacy.
             </p>
-            {/* <LinkScroll to="features" offset={-100} spy smooth> */}
-              <a
-                href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
-                target="_blank"
-              >
-                <Button icon="/images/zap.svg">Start Now</Button>
-              </a>
-            {/* </LinkScroll> */}
+            <a
+              href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block"
+            >
+              <Button icon="/images/zap.svg">Book AWS VC Pitch Call</Button>
+            </a>
           </div>
 
-          <div className="absolute -top-32 left-[calc(50%-340px)] w-[1230px] pointer-events-none hero-img_res">
-            <img
-              src="/images/hero.png"
-              className="size-1230 max-lg:h-auto"
-              alt="hero"
-            />
+          {/* Right Column: Visual Interactive Workspace */}
+          <div className="w-full lg:w-[48%] flex justify-center lg:justify-end">
+            <div className="w-full max-w-xl">
+              <InteractiveWorkspaceMockup />
+            </div>
           </div>
         </div>
+
+        {/* Futuristic Background Lights */}
+        <div className="absolute top-0 left-1/4 -z-1 w-[600px] h-[600px] bg-p2/10 rounded-full blur-[160px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 -z-1 w-[400px] h-[400px] bg-p1/5 rounded-full blur-[140px] pointer-events-none" />
       </Element>
     </section>
   );
