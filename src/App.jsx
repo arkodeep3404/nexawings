@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./sections/Header.jsx";
 import Hero from "./sections/Hero.jsx";
 import Features from "./sections/Features.jsx";
@@ -9,21 +10,30 @@ import Pricing from "./sections/Pricing.jsx";
 import Faq from "./sections/Faq.jsx";
 import Testimonials from "./sections/Testimonials.jsx";
 import Footer from "./sections/Footer.jsx";
+import PrivacyPage from "./sections/PrivacyPage.jsx";
 
 const App = () => {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   return (
     <main className="overflow-hidden">
-      <Header />
-      <Hero />
-      <Features />
-      <Playground />
-      <Download />
-      <DeveloperDocs />
-      <Security />
-      <Pricing />
-      <Faq />
-      <Testimonials />
-      <Footer />
+      {showPrivacy ? (
+        <PrivacyPage onClose={() => setShowPrivacy(false)} />
+      ) : (
+        <>
+          <Header />
+          <Hero />
+          <Features />
+          <Playground />
+          <Download />
+          <DeveloperDocs />
+          <Security />
+          <Pricing />
+          <Faq />
+          <Testimonials />
+          <Footer onOpenPrivacy={() => setShowPrivacy(true)} />
+        </>
+      )}
     </main>
   );
 };
