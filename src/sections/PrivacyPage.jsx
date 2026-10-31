@@ -1,196 +1,161 @@
-import React, { useEffect } from "react";
-import Button from "../components/Button.jsx";
+import { useEffect } from "react";
+import { Wordmark } from "./Header.jsx";
+import { CONTACT_EMAIL } from "../content.js";
+
+const LAST_UPDATED = "31 October 2026";
+
+const sections = [
+  {
+    title: "Who we are",
+    body: [
+      "NexaWings International (“NexaWings”, “we”, “us”) provides cybersecurity, monitoring, decision-intelligence and custom software services to governments, law enforcement agencies, and public and private organisations worldwide. This notice explains how we handle personal information and client data.",
+    ],
+  },
+  {
+    title: "Scope of this notice",
+    body: [
+      "This notice covers personal information collected through this website and the data entrusted to us by the organisations we work with. Work for clients is also governed by the confidentiality and data-protection terms of each engagement. Where those terms are stricter, they apply.",
+    ],
+  },
+  {
+    title: "Information we collect through this website",
+    body: [
+      "This website does not require an account. We receive personal information only when you choose to contact us, such as your name, work email address, organisation and the content of your message, whether you email us or book a briefing through our scheduling page.",
+    ],
+  },
+  {
+    title: "How we use it",
+    items: [
+      "To respond to your enquiry and arrange or conduct briefings.",
+      "To manage our relationship with you and the organisation you represent.",
+      "To meet our legal and regulatory obligations.",
+    ],
+    body: ["We use personal information only for the purposes below, and we do not sell it."],
+  },
+  {
+    title: "How we protect client data",
+    body: [
+      "We keep the data of every organisation we work with fully private and secure. Protection applies at every stage:",
+    ],
+    items: [
+      "Private by default: client data is used only for the work the client has asked us to do. It is never shared with third parties for their own purposes and never sold.",
+      "Encryption in transit: data moving between client systems and ours is protected by strong encryption, so it cannot be read or altered on the way.",
+      "Encryption at rest: data we store is encrypted at rest to a high standard, so it is unreadable without authorisation.",
+      "Secure vaults: sensitive material is held in secured, access-controlled vaults, kept separate from our general systems.",
+      "Restricted access: only authorised personnel who need access for an engagement can reach client data, and they are bound by strict confidentiality obligations.",
+      "Confidential engagements: we do not disclose who our clients are or what we do for them without their permission.",
+    ],
+  },
+  {
+    title: "Authorised testing",
+    body: [
+      "Our offensive security services, including penetration testing and red team engagements, are carried out only with the client’s written permission, within an agreed scope and clear rules of engagement. Information discovered during an engagement is treated as confidential client data and is reported only to the client.",
+    ],
+  },
+  {
+    title: "Sharing",
+    body: [
+      "We share personal information only with service providers who help us operate our communications and scheduling, and where required by law. Our booking link is provided by a third-party scheduling service, which handles information you enter there under its own terms. Service providers act on our instructions and must protect information to an appropriate standard.",
+    ],
+  },
+  {
+    title: "International operations",
+    body: [
+      "We work with clients across the world. Where information moves between countries, we take steps to protect it in line with applicable law and our contractual commitments, including client requirements about where data may be stored and processed.",
+    ],
+  },
+  {
+    title: "Retention and deletion",
+    body: [
+      "We keep enquiry information only as long as needed for the purposes above or as the law requires. Client data is kept for the duration of the engagement and handled at its end as the client’s agreement with us provides, including return or secure deletion.",
+    ],
+  },
+  {
+    title: "Your rights",
+    body: [
+      "Depending on where you live, you may have the right to access, correct, delete or restrict the use of your personal information, and to object to certain uses. To exercise these rights, contact us using the details below. We will respond within the time required by law.",
+    ],
+  },
+  {
+    title: "Security incidents",
+    body: [
+      "If we become aware of an incident affecting personal information or client data, we will act promptly to contain it and will notify affected parties and authorities as the law and our client agreements require.",
+    ],
+  },
+  {
+    title: "Changes to this notice",
+    body: [
+      "We may update this notice from time to time. The date of the latest version is shown at the top of this page.",
+    ],
+  },
+];
 
 const PrivacyPage = ({ onClose }) => {
-  // Scroll to top when page is mounted
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-s1 text-p4 relative overflow-hidden flex flex-col font-sans select-text">
-      {/* Background Gradients */}
-      <div className="absolute top-0 left-1/4 -z-1 w-[600px] h-[600px] bg-p2/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 -z-1 w-[500px] h-[500px] bg-p1/5 rounded-full blur-[140px] pointer-events-none" />
-
-      {/* Minimal Header */}
-      <header className="fixed top-0 left-0 z-50 w-full py-4 bg-black-100/80 backdrop-blur-md border-b border-s3/20">
-        <div className="container flex h-14 items-center justify-between px-6 max-lg:px-5">
-          <div onClick={onClose} className="flex items-center cursor-pointer select-none">
-            <img src="/images/icon.png" alt="logo" className="h-10 w-10 mr-2" />
-            <div className="base-bold text-p4 uppercase tracking-wider hover:text-p1 transition-colors duration-300">
-              NexaWings
-            </div>
-          </div>
-          <Button icon="/images/magictouch.svg" onClick={onClose}>
-            Back to Home
-          </Button>
+    <div className="min-h-screen">
+      <header className="border-b border-line">
+        <div className="wrap flex h-[72px] items-center justify-between">
+          <button type="button" onClick={onClose} aria-label="Back to NexaWings home">
+            <Wordmark />
+          </button>
+          <button type="button" onClick={onClose} className="btn-line min-h-[40px] px-5">
+            Back to home
+          </button>
         </div>
       </header>
 
-      {/* Privacy Content */}
-      <div className="flex-1 pt-32 pb-24 px-6 md:px-12">
-        <div className="container max-w-4xl bg-s2/40 border border-s3/30 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-500 text-left">
-          
-          {/* Document Header */}
-          <div className="border-b border-s3/20 pb-8 mb-8">
-            <h1 className="h1 max-md:h3 text-p4 uppercase mb-4 tracking-tight">
-              Privacy Policy
-            </h1>
-          </div>
+      <main className="wrap max-w-4xl py-24 md:py-32">
+        <p className="label mb-6">Legal</p>
+        <h1 className="display">Privacy notice</h1>
+        <p className="label mt-8">Last updated {LAST_UPDATED}</p>
 
-          {/* Legal Content Body */}
-          <div className="space-y-8 text-p5 text-sm leading-relaxed">
-            
-            {/* Section 1 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                1. Introduction &amp; Core Principles
-              </h2>
-              <p>
-                NexaWings International (<strong>"we"</strong>, <strong>"us"</strong>, <strong>"our"</strong>, <strong>"Company"</strong>) is the provider of the NexaWings Sovereign AI and Agentic Integration OS. We respect your data privacy rights and are fully committed to protecting all personal and corporate information processed on our platform.
-              </p>
-              <p>
-                Unlike traditional SaaS providers, NexaWings operates on a <strong>custody-first model</strong>. When deployed in Enterprise VPC Mode, all models, databases, and workflow containers reside inside your own cloud infrastructure, meaning your core data never exits your secure perimeter.
-              </p>
-            </section>
-
-            {/* Section 2 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                2. Information We Collect
-              </h2>
-              <p>
-                To deliver the AI brains, stateful orchestrators, and tool execution engines, we collect and process the following categories of information:
-              </p>
-              <ul className="list-disc list-inside space-y-2.5 pl-2 text-p5/90">
-                <li>
-                  <strong className="text-p4">Account &amp; Registration Information:</strong> Your name, business email address, company name, department designation, and password hashes.
-                </li>
-                <li>
-                  <strong className="text-p4">Third-Party Platform Credentials:</strong> Encrypted API keys, OAuth access/refresh tokens, tenant subdomain parameters, and connection secrets required to execute tasks across your CRMs, ERPs, and HRIS systems.
-                </li>
-                <li>
-                  <strong className="text-p4">Agent Executions &amp; Log Data:</strong> Console outputs, API payloads, execution latency metrics, system status flags, and failure retries generated by active Intelligence Pods.
-                </li>
-                <li>
-                  <strong className="text-p4">Telemetry &amp; Usage Metadata:</strong> IP addresses, browser agent types, page interaction patterns, and performance reports collected to monitor platform health.
-                </li>
-                <li>
-                  <strong className="text-p4">Audio Inputs (voiceSHIELD):</strong> Temporary audio streams and transcripts processed exclusively to enforce voice safety policies and filter compliance risks.
-                </li>
-              </ul>
-            </section>
-
-            {/* Section 3 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                3. Encryption, Storage, &amp; Zero-Knowledge Custody
-              </h2>
-              <p>
-                We prioritize industry-leading security practices for storing and handling connection credentials:
-              </p>
-              <ul className="list-disc list-inside space-y-2 pl-2 text-p5/90">
-                <li>
-                  <strong className="text-p4">Zero-Knowledge Key Custody:</strong> All database authentication tokens are encrypted using **AWS Key Management Service (KMS)** with custom customer-managed keys. We never store decryption keys in plaintext.
-                </li>
-                <li>
-                  <strong className="text-p4">VPC Network Isolation:</strong> All sovereign model parameters and index vectors are routed through secure **AWS PrivateLink** interfaces, bypassing the public internet completely.
-                </li>
-                <li>
-                  <strong className="text-p4">Secure Ephemeral Sandboxes:</strong> Dynamic scripts, python code audits, and tool executions are run inside isolated, ephemeral **AWS Lambda** containers that destroy themselves immediately after execution.
-                </li>
-              </ul>
-            </section>
-
-            {/* Section 4 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                4. How We Use Processed Data
-              </h2>
-              <p>
-                We use the information we collect solely for the following business purposes:
-              </p>
-              <ul className="list-disc list-inside space-y-2 pl-2 text-p5/90">
-                <li>Providing the core agentic orchestration, pipeline connections, and visual simulator services.</li>
-                <li>Executing authorized read and write back transactions across your connected software nodes.</li>
-                <li>Enforcing security filters and voice compliance limits via the voiceSHIELD security layer.</li>
-                <li>Monitoring, troubleshooting, and tuning agent model accuracies.</li>
-                <li>Complying with lawful audits, financial regulations, and legal subpoenas.</li>
-              </ul>
-            </section>
-
-            {/* Section 5 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                5. Third-Party Sharing Restrictions
-              </h2>
-              <p>
-                <strong>We do not sell, rent, or monetize your data under any circumstances.</strong>
-              </p>
-              <p>
-                Data is shared only in the following restricted scenarios:
-              </p>
-              <ul className="list-disc list-inside space-y-2 pl-2 text-p5/90">
-                <li>
-                  <strong className="text-p4">With LLM Providers:</strong> Payloads are sent to LLMs (hosted via AWS Bedrock or your private model deployments) according to your workspace model configuration.
-                </li>
-                <li>
-                  <strong className="text-p4">Authorized Service Integrations:</strong> API commands are routed to target business endpoints solely as configured by your staff in the integrations fabric.
-                </li>
-                <li>
-                  <strong className="text-p4">Legal Protection:</strong> When required by binding legal process to protect the safety, rights, or property of NexaWings, our clients, or the public.
-                </li>
-              </ul>
-            </section>
-
-            {/* Section 6 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                6. Global Compliance (GDPR, CCPA, &amp; HIPAA)
-              </h2>
-              <p>
-                NexaWings aligns with global data protection frameworks:
-              </p>
-              <ul className="list-disc list-inside space-y-2 pl-2 text-p5/90">
-                <li>
-                  <strong className="text-p4">GDPR (EU &amp; UK):</strong> We act as the Data Processor for your integration streams. Users retain the right to erase, restrict, port, or access their data.
-                </li>
-                <li>
-                  <strong className="text-p4">HIPAA Alignment:</strong> For medical and healthcare intelligence pods, we sign Business Associate Agreements (BAAs) and encrypt PHI data both in transit and at rest.
-                </li>
-                <li>
-                  <strong className="text-p4">CCPA/CPRA:</strong> We act as a service provider and do not Sell or Share Personal Information as defined under California law.
-                </li>
-              </ul>
-            </section>
-
-            {/* Section 7 */}
-            <section className="space-y-4">
-              <h2 className="h4 text-p4 uppercase tracking-wide border-l-2 border-p1 pl-3">
-                7. Contact Us &amp; Inquiries
-              </h2>
-              <p>
-                For questions, concerns, or requests regarding this Privacy Policy, please contact our team at:
-              </p>
-              <div className="p-5 rounded-2xl border border-s3/40 bg-s1/60 font-mono text-xs space-y-1.5 text-p4">
-                <div>Email: contact@nexawings.com</div>
+        <div className="mt-20 space-y-14">
+          {sections.map((s, i) => (
+            <section key={s.title} className="grid gap-4 border-t border-line pt-8 md:grid-cols-[56px_1fr] md:gap-8">
+              <p className="label pt-2 text-signal">{String(i + 1).padStart(2, "0")}</p>
+              <div>
+                <h2 className="font-display text-2xl font-normal tracking-[-0.02em] text-fg">
+                  {s.title}
+                </h2>
+                {s.body?.map((para) => (
+                  <p key={para} className="mt-4 max-w-2xl text-lg leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+                {s.items && (
+                  <ul className="mt-4 max-w-2xl space-y-3">
+                    {s.items.map((item) => (
+                      <li key={item} className="flex items-start gap-4 text-lg leading-relaxed">
+                        <span className="mt-[13px] size-1.5 shrink-0 bg-signal" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </section>
+          ))}
 
-          </div>
+          <section className="grid gap-4 border-t border-line pt-8 md:grid-cols-[56px_1fr] md:gap-8">
+            <p className="label pt-2 text-signal">{String(sections.length + 1).padStart(2, "0")}</p>
+            <div>
+              <h2 className="font-display text-2xl font-normal tracking-[-0.02em] text-fg">Contact</h2>
+              <p className="mt-4 text-lg">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-fg underline underline-offset-4 hover:text-signal"
+                >
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
+            </div>
+          </section>
         </div>
-      </div>
-
-      {/* Minimal Footer */}
-      <footer className="py-6 border-t border-s3/20 bg-black-100/60 mt-auto">
-        <div className="container flex flex-col md:flex-row items-center justify-between px-6 text-xs text-p5/40 font-mono">
-          <span>Copyright @ NexaWings International 2026. All Rights Reserved.</span>
-          <div onClick={onClose} className="hover:text-p1 cursor-pointer transition-colors duration-300 mt-2 md:mt-0">
-            Back to home page
-          </div>
-        </div>
-      </footer>
+      </main>
     </div>
   );
 };

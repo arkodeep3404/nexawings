@@ -1,31 +1,34 @@
-import React from "react";
-import { socials } from "../constants/index.jsx";
+import { Wordmark } from "./Header.jsx";
+import { CONTACT_EMAIL, navItems } from "../content.js";
 
-const Footer = ({ onOpenPrivacy }) => {
-  return (
-    <footer>
-      <div className="container py-10">
-        <div className="flex w-full max-md:flex-col items-center justify-between gap-5 border-t border-s3/20 pt-10">
-          
-          <div className="small-compact flex flex-col md:flex-row items-center gap-5">
-            <p className="opacity-70 text-xs">
-              Copyright @ NexaWings International 2026. All Rights Reserved
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center md:ml-auto">
-            <p 
-              onClick={onOpenPrivacy}
-              className="text-p5 transition-all duration-500 hover:text-p1 cursor-pointer text-xs"
-            >
-              Privacy Policy
-            </p>
-          </div>
-
-        </div>
+const Footer = ({ onOpenPrivacy }) => (
+  <footer className="border-t border-line">
+    <div className="wrap flex flex-col gap-12 py-14 md:flex-row md:items-start md:justify-between">
+      <div>
+        <Wordmark />
+        <p className="mt-6 max-w-xs text-sm leading-relaxed">
+          Cybersecurity, monitoring and decision intelligence for institutions worldwide.
+        </p>
       </div>
-    </footer>
-  );
-};
+
+      <nav aria-label="Footer" className="grid grid-cols-2 gap-x-16 gap-y-4 font-mono text-[12px] uppercase tracking-label">
+        {navItems.map((item) => (
+          <a key={item.id} href={`#${item.id}`} className="text-mute transition-colors hover:text-fg">
+            {item.label}
+          </a>
+        ))}
+        <a href={`mailto:${CONTACT_EMAIL}`} className="text-mute transition-colors hover:text-fg">
+          Contact
+        </a>
+        <button type="button" onClick={onOpenPrivacy} className="text-left uppercase tracking-label text-mute transition-colors hover:text-fg">
+          Privacy
+        </button>
+      </nav>
+    </div>
+    <div className="wrap border-t border-line py-6 text-xs">
+      © {new Date().getFullYear()} NexaWings International. All rights reserved.
+    </div>
+  </footer>
+);
 
 export default Footer;

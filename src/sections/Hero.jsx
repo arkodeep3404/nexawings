@@ -1,49 +1,42 @@
-import { Element } from "react-scroll";
-import Button from "../components/Button.jsx";
-import InteractiveWorkspaceMockup from "../components/InteractiveWorkspaceMockup.jsx";
+import Globe from "../components/Globe.jsx";
+import { BOOKING_URL } from "../content.js";
 
-const Hero = () => {
-  return (
-    <section className="relative pt-48 pb-32 max-lg:pt-40 max-lg:pb-24 max-md:pt-28 max-md:pb-20 overflow-hidden">
-      <Element name="hero">
-        <div className="container relative z-2 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-6">
-          {/* Left Column: Product Branding Copy */}
-          <div className="w-full lg:w-[50%] flex flex-col items-start text-left">
-            <div className="caption small-2 uppercase text-p3 mb-4 tracking-widest">
-              Sovereign AI &amp; Agentic Action OS
-            </div>
-            <h1 className="mb-6 text-[40px] sm:text-[60px] xl:text-[72px] leading-[1.05] font-black uppercase text-p4 tracking-tight">
-              Sovereign AI.<br />
-              Orchestrated.<br />
-              <span className="text-p1">Executed.</span>
-            </h1>
-            <p className="max-w-md mb-10 text-[16px] sm:text-[18px] text-p5 leading-relaxed">
-              NexaWings unifies sovereign domain-expert brains, stateful multi-agent workflows, and secure sandboxed tool execution. Natively powered by AWS Bedrock for sovereign model pipelines and AWS KMS for encrypted credential isolation.
-            </p>
-            <a
-              href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block"
-            >
-              <Button icon="/images/zap.svg">Book AWS VC Pitch Call</Button>
-            </a>
-          </div>
+const Hero = () => (
+  <section id="top" className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink">
+    <div className="grid-lines pointer-events-none absolute inset-0" />
+    <Globe className="pointer-events-none absolute inset-0 h-full w-full max-lg:-translate-y-[10%] max-lg:opacity-40 lg:left-[38%] lg:w-[62%]" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/90 via-transparent to-transparent max-lg:hidden" />
 
-          {/* Right Column: Visual Interactive Workspace */}
-          <div className="w-full lg:w-[48%] flex justify-center lg:justify-end">
-            <div className="w-full max-w-xl">
-              <InteractiveWorkspaceMockup />
-            </div>
-          </div>
-        </div>
+    <div className="wrap relative pb-14 pt-40 md:pb-20">
+      <p className="label mb-8 flex items-center gap-3">
+        <span className="size-1.5 bg-signal" />
+        Offensive security · Defence · Decision intelligence
+      </p>
+      <h1 className="display max-w-[15ch]">Defend what the world depends on.</h1>
+      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-neutral-300 md:text-xl">
+        NexaWings partners with governments, law enforcement and the world&apos;s largest
+        organisations to deliver AI-powered cybersecurity, penetration testing and red teaming,
+        monitoring, fraud detection and decision-making solutions, with custom software built and
+        deployed at global scale.
+      </p>
+      <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+        <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn-solid sm:min-w-[260px]">
+          Request a briefing
+        </a>
+        <a href="#capabilities" className="btn-line sm:min-w-[260px]">
+          Explore capabilities
+        </a>
+      </div>
+    </div>
 
-        {/* Futuristic Background Lights */}
-        <div className="absolute top-0 left-1/4 -z-1 w-[600px] h-[600px] bg-p2/10 rounded-full blur-[160px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 -z-1 w-[400px] h-[400px] bg-p1/5 rounded-full blur-[140px] pointer-events-none" />
-      </Element>
-    </section>
-  );
-};
+    <div className="wrap relative">
+      <div className="flex items-center justify-between border-t border-line py-5">
+        <span className="label">Scroll</span>
+        <span className="label">Confidential by default</span>
+      </div>
+    </div>
+  </section>
+);
 
 export default Hero;

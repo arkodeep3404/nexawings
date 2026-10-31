@@ -1,128 +1,118 @@
-import { Link as LinkScroll } from "react-scroll";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { BOOKING_URL, navItems } from "../content.js";
+
+export const Wordmark = ({ className }) => (
+  <span className={clsx("flex items-center gap-3", className)}>
+    <img src="/images/icon.png" alt="" width={34} height={28} className="h-7 w-auto" />
+    <span className="font-mono text-[13px] font-medium uppercase tracking-label text-fg">
+      NexaWings
+    </span>
+  </span>
+);
 
 const Header = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 32);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const NavLink = ({ title, label }) => (
-    <LinkScroll
-      onClick={() => setIsOpen(false)}
-      to={title}
-      offset={-100}
-      spy
-      smooth
-      activeClass="nav-active"
-      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
-    >
-      {label || title}
-    </LinkScroll>
-  );
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]"
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-500",
+        scrolled || open
+          ? "border-b border-line bg-ink/95 backdrop-blur-xl"
+          : "border-b border-transparent",
       )}
     >
-      <div className="container flex h-14 items-center max-lg:px-5">
-        <a className="lg:hidden flex-1 cursor-pointer z-2">
-          <div className="flex items-center">
-            <img src="/images/icon.png" alt="logo" className="h-14 w-14" />
-            <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h6 p-2">
-              NexaWings
-            </div>
-          </div>
+      <div className="wrap flex h-[72px] items-center justify-between">
+        <a href="#top" aria-label="NexaWings home" onClick={() => setOpen(false)}>
+          <Wordmark />
         </a>
 
-        <div
-          className={clsx(
-            "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
-            isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none"
-          )}
-        >
-          <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
-            <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
-              <ul className="flex max-lg:block max-lg:px-12">
-                <li className="nav-li">
-                  <NavLink title="services" label="features" />
-                  <div className="dot" />
-                  <NavLink title="playground" label="simulator" />
-                </li>
-
-                <li className="nav-logo">
-                  <LinkScroll
-                    to="hero"
-                    offset={-250}
-                    spy
-                    smooth
-                    className={clsx(
-                      "max-lg:hidden transition-transform duration-500 cursor-pointer flex items-center justify-center"
-                    )}
-                  >
-                    <img
-                      src="/images/icon.png"
-                      width={50}
-                      height={50}
-                      alt="logo"
-                    />
-                    <div className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5 p-2">
-                      NexaWings
-                    </div>
-                  </LinkScroll>
-                </li>
-
-                <li className="nav-li">
-                  <NavLink title="integrations" label="integrations" />
-                  <div className="dot" />
-                  <NavLink title="pricing" label="pricing" />
-                </li>
-              </ul>
-            </nav>
-
-            <div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">
-              <img
-                src="/images/bg-outlines.svg"
-                width={960}
-                height={380}
-                alt="outline"
-                className="relative z-2"
-              />
-              <img
-                src="/images/bg-outlines-fill.png"
-                width={960}
-                height={380}
-                alt="outline"
-                className="absolute inset-0 mix-blend-soft-light opacity-5"
-              />
-            </div>
-          </div>
-        </div>
+        <nav aria-label="Primary" className="hidden items-center gap-10 lg:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="font-mono text-[12px] uppercase tracking-label text-mute transition-colors hover:text-fg"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn-line min-h-[40px] px-5">
+            Request a briefing
+          </a>
+        </nav>
 
         <button
-          className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
-          onClick={() => setIsOpen((prevState) => !prevState)}
+          type="button"
+          className="flex size-11 items-center justify-center lg:hidden"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
         >
-          <img
-            src={`/images/${isOpen ? "close" : "magic"}.svg`}
-            alt="magic"
-            className="size-1/2 object-contain"
-          />
+          <span className="relative block h-3 w-6">
+            <span
+              className={clsx(
+                "absolute left-0 h-px w-6 bg-fg transition-all duration-300",
+                open ? "top-1.5 rotate-45" : "top-0",
+              )}
+            />
+            <span
+              className={clsx(
+                "absolute left-0 h-px w-6 bg-fg transition-all duration-300",
+                open ? "top-1.5 -rotate-45" : "top-3",
+              )}
+            />
+          </span>
         </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        hidden={!open}
+        className="fixed inset-x-0 bottom-0 top-[72px] overflow-y-auto bg-ink lg:hidden"
+      >
+        <nav aria-label="Mobile" className="wrap flex flex-col py-6">
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              onClick={() => setOpen(false)}
+              className="border-b border-line py-6 text-3xl font-light tracking-tight text-fg"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-solid mt-10"
+            onClick={() => setOpen(false)}
+          >
+            Request a briefing
+          </a>
+        </nav>
       </div>
     </header>
   );
