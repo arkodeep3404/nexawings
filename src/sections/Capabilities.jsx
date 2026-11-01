@@ -65,8 +65,8 @@ const Capabilities = () => {
                   )}
                 >
                   <div className={clsx("overflow-hidden", !isOpen && "invisible")}>
-                    <div className="grid gap-8 pb-12 md:grid-cols-[calc(2rem+2.5rem)_1fr_1fr] md:gap-10">
-                      <span className="hidden md:block" />
+                    <div className="grid gap-8 pb-12 pl-[52px] md:pl-[72px] lg:grid-cols-[calc(2rem+2.5rem)_1fr_1fr] lg:gap-10 lg:pl-0">
+                      <span className="hidden lg:block" />
                       <p className="max-w-xl text-lg leading-relaxed text-neutral-700 md:text-xl">
                         {c.summary}
                       </p>

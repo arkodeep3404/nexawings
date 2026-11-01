@@ -92,14 +92,19 @@ const sections = [
 
 const PrivacyPage = ({ onClose }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   return (
     <div className="min-h-screen">
       <header className="border-b border-line">
         <div className="wrap flex h-[72px] items-center justify-between">
-          <button type="button" onClick={onClose} aria-label="Back to NexaWings home">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Back to NexaWings home"
+            className="flex min-h-[44px] items-center"
+          >
             <Wordmark />
           </button>
           <button type="button" onClick={onClose} className="btn-line min-h-[40px] px-5">
@@ -147,7 +152,7 @@ const PrivacyPage = ({ onClose }) => {
               <p className="mt-4 text-lg">
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-fg underline underline-offset-4 hover:text-signal"
+                  className="inline-block py-2 text-fg underline underline-offset-4 hover:text-signal"
                 >
                   {CONTACT_EMAIL}
                 </a>

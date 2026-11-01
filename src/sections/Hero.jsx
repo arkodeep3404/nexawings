@@ -14,7 +14,7 @@ const Hero = () => (
         Offensive security · Defence · Decision intelligence
       </p>
       <h1 className="display max-w-[15ch]">Defend what the world depends on.</h1>
-      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-neutral-300 md:text-xl">
+      <p className="mt-8 max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg md:text-xl">
         NexaWings partners with governments, law enforcement and the world&apos;s largest
         organisations to deliver AI-powered cybersecurity, penetration testing and red teaming,
         monitoring, fraud detection and decision-making solutions, with custom software built and

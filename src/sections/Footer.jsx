@@ -11,16 +11,16 @@ const Footer = ({ onOpenPrivacy }) => (
         </p>
       </div>
 
-      <nav aria-label="Footer" className="grid grid-cols-2 gap-x-16 gap-y-4 font-mono text-[12px] uppercase tracking-label">
+      <nav aria-label="Footer" className="grid grid-cols-2 gap-x-16 gap-y-0 font-mono text-[12px] uppercase tracking-label">
         {navItems.map((item) => (
-          <a key={item.id} href={`#${item.id}`} className="text-mute transition-colors hover:text-fg">
+          <a key={item.id} href={`#${item.id}`} className="flex min-h-[44px] items-center text-mute transition-colors hover:text-fg">
             {item.label}
           </a>
         ))}
-        <a href={`mailto:${CONTACT_EMAIL}`} className="text-mute transition-colors hover:text-fg">
+        <a href={`mailto:${CONTACT_EMAIL}`} className="flex min-h-[44px] items-center text-mute transition-colors hover:text-fg">
           Contact
         </a>
-        <button type="button" onClick={onOpenPrivacy} className="text-left uppercase tracking-label text-mute transition-colors hover:text-fg">
+        <button type="button" onClick={onOpenPrivacy} className="flex min-h-[44px] items-center text-left uppercase tracking-label text-mute transition-colors hover:text-fg">
           Privacy
         </button>
       </nav>

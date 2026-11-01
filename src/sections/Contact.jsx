@@ -12,7 +12,7 @@ const Contact = () => (
         Contact
       </p>
       <h2 className="display max-w-[12ch]">Start the conversation.</h2>
-      <p className="mt-8 max-w-xl text-lg leading-relaxed text-neutral-300 md:text-xl">
+      <p className="mt-8 max-w-xl text-base leading-relaxed text-neutral-300 sm:text-lg md:text-xl">
         Tell us about your mission. We will arrange a confidential briefing with the right
         people on our team.
       </p>
